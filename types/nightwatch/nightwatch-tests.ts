@@ -1,5 +1,5 @@
-export = {
-  'Demo test Google': function (browser) {
+const test: NightWatchTests = {
+  'Demo test Google': (browser) => {
     browser
       .url('http://www.google.com')
       .waitForElementVisible('body', 1000)
@@ -10,4 +10,6 @@ export = {
       .assert.containsText('#main', 'Night Watch')
       .end();
   }
-} as NightWatchTests;
+};
+
+export = test;
